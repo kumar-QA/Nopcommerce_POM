@@ -6,7 +6,7 @@
       <class name="Test.LoginnTestPage">
         <methods>
           <include name="setup"/>
-          <include name="validateLoginFunction"/>
+          <include name="InvalidateLoginFunction"/>
         </methods>
       </class> <!-- Test.LoginnTestPage -->
     </classes>

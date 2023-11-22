@@ -20,11 +20,26 @@ public class LoginnTestPage extends Baseclass {
 	  
 	@Test
 	public void validateLoginFunction() {
-		dp=lp.verifyLogin();
+		dp=lp.verifyLogin("admin@yourstore.com","admin");
 		String Expectedvalue="homepageLanded";
 		Assert.assertEquals(dp.getPageTitle(), Expectedvalue);
 		
 	}
 	
+	@Test
+	public void InvalidateLoginFunction() {
+		dp=lp.verifyLogin("adminstore.com","a2wwmin");
+		String Expectedvalue="homepageLanded";
+		Assert.assertEquals(dp.getPageTitle(), Expectedvalue);
+		
+	}
+	
+	@Test
+	public void validateusername_InvalidPwd_LoginFunction() {
+		dp=lp.verifyLogin("admin@yourstore.com","sccccce");
+		String Expectedvalue="homepageLanded";
+		Assert.assertEquals(dp.getPageTitle(), Expectedvalue);
+		
+	}
 	
 }

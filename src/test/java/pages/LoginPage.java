@@ -23,11 +23,11 @@ public class LoginPage{
 		WebElement LoginBtn;
 
 		
-		public DashBoardPage verifyLogin() {
+		public DashBoardPage verifyLogin(String uname,String pwd) {
 			usernmae.clear();
-			usernmae.sendKeys("admin@yourstore.com");
+			usernmae.sendKeys(uname);
 			password.clear();
-			password.sendKeys("admin");
+			password.sendKeys(pwd);
 			LoginBtn.click();
 			return new DashBoardPage(driver);
 		}

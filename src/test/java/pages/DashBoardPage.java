@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class DashBoardPage {
 	
 	WebDriver driver;
+	
 	 public DashBoardPage(WebDriver driverl) {
 		 driver=driverl;
 		 PageFactory.initElements(driver,this);
@@ -27,6 +28,13 @@ public class DashBoardPage {
 			return pageTitle.getText();
 		}
 		
+		public void clickonCatalogLink() {
+			CatalogLink.click();
+		}
+		
+		public void clickonProductsLink() {
+			ProductsLinks.click();
+		}
 	 
 
 }
